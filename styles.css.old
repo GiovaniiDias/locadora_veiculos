@@ -1,0 +1,88 @@
+body{
+    font-family: Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    
+    
+}
+h1, h2, h3{
+    color: #2c3e50;
+    margin-top: 30px;
+}
+
+.menu{
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    margin-top: 20px;
+    
+}
+.formulario{
+    margin-top: 30px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100px;
+   
+    margin-top: 100px;
+   
+}
+.Btformulario{
+    width: 150px;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.botao{
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.voltar{
+    width: 80px;
+    height: 40px;
+    background-color: #27ae60;
+    padding: 10px;
+    color: white;
+    border-radius: 4px;
+    
+}
+
+.salvar{
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+}
+
+th {
+    background-color: #27ae60;
+    color: white;
+    padding: 12px;
+
+    border-radius: 4px;
+}
+
+td {
+    border: 1px solid rgb(2, 2, 2);
+    padding: 10px;
+    border-radius: 4px;
+}

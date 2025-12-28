@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="styles.css">
+<script src="script.js"></script>
+<h2> Clientes </h2>
+<div class="voltar">
+<p><input type="button" class="BtVoltar" value="Voltar" onclick="location.href='app.html'"/></p>
+</div>
+<div class="formulario" id="formularioCliente">
+    <form method="post" enctype="multipart/form-data">
+    
+        <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+        <tbody>
+        
+            <tr>
+                <td><input class="Btformulario" type="text"  id="nomeCliente" placeholder="Nome do cliente"></td>
+                <td><input class="Btformulario" type="text" id="emailCliente" placeholder="Email do cliente"></td>
+                <td><input class="Btformulario" type="number" id="telefoneCliente" placeholder="Telefone do cliente"></td>
+            </tr>
+            
+        
+        </tbody>
+        </table>
+        <p><input type="submit" class="botao" name="salvar" id="salvar" value="Salvar" onclick="AdicionarCliente()"/></p>
+        
+    </form> 
+</div>
+
+    
