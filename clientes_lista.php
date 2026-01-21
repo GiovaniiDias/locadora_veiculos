@@ -1,4 +1,4 @@
-<h4 style="margin-bottom:50px;">PHP Inserindo dados do Clientes em no BD</h4>
+<h4 style="margin-bottom:50px;">Lista de Clientes no BD</h4>
 
 <?php
 $host = 'localhost';
@@ -42,28 +42,6 @@ VALUES
 <?php echo $mensagem; ?>
 
 
-
-<form name="form" method="POST" action="clientes_lista.php">
-
-
-    <h4> Cadastro de Clientes</h4>
-    <table border="1" cellpadding="4" cellspacing="0" width="400">
-        <tr>
-            <td>Nome</td>
-            <td><input type="text" name="nome" id="nome"></td>
-        </tr>
-        <tr>
-            <td>CPF</td>
-            <td><input type="text" name="cpf" id="cpf"></td>
-        </tr>
-        <tr>
-            <td>Situação</td>
-            <td><input type="text" name="situacao" id="situacao"></td>
-        </tr>
-    </table>
-    <input type="button" value="Cadastrar" onclick="AdicionarCliente()"><br><br>
-</form>
-
 <table border="1" cellpadding="4" cellspacing="0">
     <tr>
         <td><strong>Código</strong></td>
@@ -90,7 +68,7 @@ VALUES
         <td>".$nome."</td>
         <td>".$cpf."</td>
         <td>".$situacao."</td>
-        <td><a href='php_video_10_editar.php?produto=.$codigo.'><strong>Editar</strong></a></td>
+        <td><a href='php_video_10_editar.php?clientes=<?php echo $$codigo; ?>'><strong>Editar</strong></a></td>
      </tr>";
         }
     ?>
