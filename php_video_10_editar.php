@@ -1,14 +1,3 @@
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <title>Editar Cliente</title>
-</head>
-
-
-<body>
-
-
     <h4 style="margin-bottom:50px;">PHP Inserindo dados do Clientes em no BD</h4>
 
     <?php
@@ -54,16 +43,32 @@
     $tb_clientes = mysqli_query($conn, $sql);
     $dados = mysqli_fetch_array($tb_clientes);
     if ($dados) {
-    $codigo = $dados["codigo"];
-    $nome = $dados["nome"];
-    $cpf = $dados["cpf"];
-    $situacao = $dados["situacao"];
-    }else {
+        $codigo = $dados["codigo"];
+        $nome = $dados["nome"];
+        $cpf = $dados["cpf"];
+        $situacao = $dados["situacao"];
+    } else {
         $codigo = $nome = $cpf = $situacao = "";
         echo "Erro: Cliente $clientes não encontrado.";
     }
 
     //echo "Conexão estabelecida com sucesso<br><br>";
+
+
+    // Excluir registro
+    if (isset($_POST["excluir"])) {
+        $sql = "DELETE FROM clientes WHERE codigo = '$clientes'";
+        $delete = mysqli_query($conn, $sql);
+        if ($delete == '1') {
+            echo "Registro excluído com sucesso!";
+            echo "<script>CarregarPagina('clientes_lista.php');</script>";
+        } else {
+            echo "Erro ao excluir registro: ";
+        }
+    }
+
+
+
 
     $mensagem = "";
 
@@ -92,8 +97,8 @@ VALUES
 
 
 
-    <form name="form" method="POST" action="php_video_10_editar.php?clientes=<?php echo $clientes; ?>">
-
+    <form name="form" onsubmit="event.preventDefault(); SalvarEdicao(this);">
+        <input type="hidden" name="Atualizar" value="1">
 
         <h4> Cadastro de Clientes</h4>
         <table border="1" cellpadding="4" cellspacing="0" width="400">
@@ -115,13 +120,13 @@ VALUES
                 </td>
             </tr>
         </table>
-        <input type="submit" name="Atualizar" value="Atualizar">
-        <input type="button" name="Voltar" value="Voltar" onclick="javascript:location.href='clientes_lista.php'">
+        <input type="submit" name="atualizar" value="Atualizar">
+
+        <input type="button" value="Excluir" onclick="ExcluirCliente()">
+
+        <input type="button" name="Voltar" value="Voltar" onclick="CarregarPagina('clientes_lista.php')">
     </form>
     <?php
     mysqli_close($conn);
 
     ?>
-</body>
-
-</html>

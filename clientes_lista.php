@@ -57,20 +57,24 @@ VALUES
 
 
     while ($dados = mysqli_fetch_array($tb_clientes)) {
-         $codigo = $dados["codigo"];
-         $nome = $dados["nome"];
-         $cpf = $dados["cpf"];
-         $situacao = $dados["situacao"];
-        // echo "$codigo - $nome - $cpf - $situacao<br>";w
-    echo "
-     <tr>
-        <td>".$codigo."</td>
-        <td>".$nome."</td>
-        <td>".$cpf."</td>
-        <td>".$situacao."</td>
-        <td><a href='php_video_10_editar.php?clientes=<?php echo $$codigo; ?>'><strong>Editar</strong></a></td>
-     </tr>";
-        }
+        $codigo = $dados["codigo"];
+        $nome = $dados["nome"];
+        $cpf = $dados["cpf"];
+        $situacao = $dados["situacao"];
+
+        echo "
+<tr>
+    <td>" . $codigo . "</td>
+    <td>" . $nome . "</td>
+    <td>" . $cpf . "</td>
+    <td>" . $situacao . "</td>
+    <td>
+        <a href='javascript:void(0)' onclick=\"CarregarPagina('php_video_10_editar.php?clientes=" . $codigo . "')\">
+            <strong>Editar</strong>
+        </a>
+    </td>
+</tr>";
+    }
     ?>
 
 </table>

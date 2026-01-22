@@ -1,9 +1,6 @@
 /* Configurações Gerais */
 body {
-<<<<<<< HEAD
-=======
     
->>>>>>> testes
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f7f6;
     color: #333;
@@ -13,23 +10,18 @@ body {
 }
 
 h1, h2, h3 {
-<<<<<<< HEAD
     color: #2c3e50;
     text-align: center;
 }
 
-=======
     
-    color: #2c3e50;
-    text-align: center;
-}
+
 .SubTituloHome{
     text-align: center;
     font-size: 18px;
     font-style: italic;
     
 }
->>>>>>> testes
 h1 {
     border-bottom: 2px solid #3498db;
     padding-bottom: 10px;
@@ -37,11 +29,7 @@ h1 {
 }
 
 
-<<<<<<< HEAD
-.conteudo, .formulario, .menu {
-=======
 .Principal, .formulario, .menu {
->>>>>>> testes
     max-width: 900px;
     margin: 20px auto;
     background: #fff;
@@ -51,12 +39,7 @@ h1 {
 }
 
 
-<<<<<<< HEAD
-.menu form {
-=======
 .menu {
-   
->>>>>>> testes
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -94,11 +77,8 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
-<<<<<<< HEAD
     background: white;
-=======
     background: rgb(247, 245, 245);
->>>>>>> testes
 }
 
 table th, table td {
