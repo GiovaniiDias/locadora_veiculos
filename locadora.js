@@ -125,3 +125,28 @@ function ExcluirCliente() {
       .catch((error) => console.error("Erro:", error));
   }
 }
+
+// js para as ARRAYS
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const formulario = document.querySelector('form');
+
+    formulario.addEventListener('submit', function(e) {
+        e.preventDefault(); // Impede o recarregamento da página
+
+        // Referência aos elementos
+        const selectMarca = document.getElementById('marca');
+        const selectModelo = document.getElementById('modelo');
+
+        // Captura do texto visível
+        const nomeMarca = selectMarca.options[selectMarca.selectedIndex].text;
+        const nomeModelo = selectModelo.options[selectModelo.selectedIndex].text;
+
+        // Exibição no HTML - CORRIGIDO ABAIXO:
+        const divResultado = document.getElementById('Resultado');
+        
+        // Usamos a crase (`) para permitir o uso de ${} e tags HTML
+        divResultado.innerHTML = `<strong>Busca realizada:</strong> Marca: ${nomeMarca} e Modelo: ${nomeModelo}.`;
+    });
+});
