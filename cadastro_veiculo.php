@@ -1,55 +1,57 @@
+htm l
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Lista de Veículos</title>
+    <meta charset="utf-8">
+    <title>Exemplo de base de dados com array - Carros</title>
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
+    <form name="form" method="post" enctype="multipart/form-data">
+        <div id="FormPesquisa">
+            <h3>Exemplo de base de dados com Array - Veículos</h3>
 
-    <h2>Lista de Veículos Disponíveis</h2>
+            <div id="LinhaUm" class="BlocoPadrao">
+                <div id="Marca" class="BlocoCampos">
+                    <label>Marca</label>
+                    <select id="marca" name="marca">
+                        <option value="0">Todas</option>
+                        <option value="200">Toyota</option>
+                        <option value="201">Volkswagen</option>
+                        <option value="202">Ford</option>
+                        <option value="203">Honda</option>
+                    </select>
+                </div>
 
-    <table width="700" border="1" cellspacing="0" cellpadding="4">
-        <tr>
-            <td>#</td>
-            <td>Marca</td>
-            <td>Modelo</td>
-            <td>Ano</td>
-            <td>Cor</td>
-            <td>Placa</td>
-            <td>Valor Diária R$</td>
-            <td>Ação</td>
-        </tr>
+                <div id="Modelo" class="BlocoCampos">
+                    <label>Modelo</label>
+                    <select id="modelo" name="modelo">
+                        <option value="0">Todos</option>
+                        <option value="1">Corolla</option>
+                        <option value="2">Golf</option>
+                        <option value="3">Mustang</option>
+                        <option value="4">Civic</option>
+                        <option value="5">Hilux</option>
+                        <option value="6">Polo</option>
+                        <option value="7">Territory</option>
+                        <option value="8">HR-V</option>
+                    </select>
+                </div>
+            </div>
 
-        <?php
-        $count = 1;
-        $estoque = array(
-            array("marca" => "Toyota", "modelo" => "Corolla", "ano" => "2020", "cor" => "Prata", "placa" => "ABC-1234", "valor" => "150.00"),
-            array("marca" => "Honda",  "modelo" => "Civic",   "ano" => "2019", "cor" => "Preto", "placa" => "XYZ-5678", "valor" => "180.00"),
-            array("marca" => "Fiat",   "modelo" => "Argo",    "ano" => "2021", "cor" => "Branco", "placa" => "KJH-9012", "valor" => "120.00")
-        );
-
-
-        foreach ($estoque as $veiculo) {
-        ?>
-        <tr>
-            <td><?php echo $count; ?></td>
-            <td><?php echo $veiculo['marca']; ?></td>
-            <td><?php echo $veiculo['modelo']; ?></td>
-            <td><?php echo $veiculo['ano']; ?></td>
-            <td><?php echo $veiculo['cor']; ?></td>
-            <td><?php echo $veiculo['placa']; ?></td>
-            <td>R$ <?php echo number_format($veiculo['valor'], 2, ',', '.'); ?></td>
-            <td>
-                <button type="button">Abrir</button>
-            </td>
-        </tr>
-        <?php
-            $count++;
-        }
-        ?>
-    </table>
+            <div id="LinhaDois" class="BlocoPadrao">
+                <div id="BotaoPesquisar" class="BlocoCampos">
+                    <input type="submit" class="Botao" id="pesquisar" name="pesquisar" value="Pesquisar Veículo">
+                </div>
+            </div>
+        </div>
+        <div id="Resultado">
+        </div>
+    </form>
+    <script src="locadora.js"></script>
 </body>
 
 </html>

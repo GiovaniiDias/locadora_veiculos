@@ -72,6 +72,22 @@ h1 {
     background-color: #7f8c8d;
 }
 
+.BlocoPadrao {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.BlocoCampos {
+    display: flex;
+    flex-direction: column;
+}
+
+.Botao {
+    cursor: pointer;
+    padding: 5px 15px;
+}
+
 
 table {
     width: 100%;
