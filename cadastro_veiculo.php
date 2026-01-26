@@ -1,14 +1,18 @@
 htm l
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="utf-8">
     <title>Exemplo de base de dados com array - Carros</title>
     <link rel="stylesheet" href="styles.css">
 
+    <style>
+        /* Mantendo os seletores do seu print */
+        .BlocoPadrao { display: flex; gap: 10px; margin-bottom: 10px; }
+        .BlocoCampos { display: flex; flex-direction: column; }
+        .Botao { cursor: pointer; padding: 5px 15px; }
+    </style>
 </head>
-
 <body>
     <form name="form" method="post" enctype="multipart/form-data">
         <div id="FormPesquisa">
@@ -52,6 +56,9 @@ htm l
         </div>
     </form>
     <script src="locadora.js"></script>
+        <div id="Resultado" >
+            </div>
+    </form>
+<script src="locadora.js"></script>
 </body>
-
 </html>
